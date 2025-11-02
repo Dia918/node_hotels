@@ -11,10 +11,6 @@ app.get('/', (req, res) => {
   res.send('Render server is working!');
 });
 
-app.listen(PORT, '0.0.0.0', () => {
-  console.log(`✅ Server is running on port ${PORT}`);
-});
-
 app.get('/', (req, res)=>{ 
     res.send("hello how can i help you");
 })
@@ -32,6 +28,6 @@ const menuRoutes = require('./routes/menuRoutes');
 app.use('/menuItems', menuRoutes)
 
 
-app.listen(PORT, ()=>{
-    console.log('listening on port 3001');
-})
+app.listen(PORT, '0.0.0.0', ()=>{
+    console.log(`listening on port 3001 || Server is running on port ${PORT}`);
+});
